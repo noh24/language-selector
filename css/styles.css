@@ -1,0 +1,6 @@
+body {
+  background: linear-gradient(45deg, rgba(122, 255, 226, 0.562), rgba(103, 143, 253, 0.575), rgba(193, 106, 233, 0.568));
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}

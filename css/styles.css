@@ -4,3 +4,21 @@ body {
   background-size: cover;
   background-attachment: fixed;
 }
+
+.hidden {
+  display: none;
+}
+
+.card-header {
+  margin-bottom: 30px;
+}
+
+.jumbotron {
+  margin-top: 30px;
+  background-color: rgba(255, 255, 255, 0.432);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.content {
+  background-color: rgba(240, 248, 255, 0.308);
+}

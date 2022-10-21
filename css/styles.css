@@ -1,18 +1,26 @@
 body {
   background: linear-gradient(60deg, rgba(7, 7, 7, 0.562), rgba(28, 121, 82, 0.349), rgba(26, 27, 26, 0.568));
+  /* background: linear-gradient(60deg, rgba(241, 227, 227, 0.247), rgba(161, 236, 205, 0.349), rgba(228, 235, 228, 0.267)); */
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   text-align: center;
+  color: white;
 }
 
 nav.navbar,
-nav.navbar-expand-lg {
+nav.navbar-expand-lg,
+nav.navbar-custom {
   background: linear-gradient(60deg, rgba(7, 7, 7, 0.247), rgba(28, 121, 82, 0.349), rgba(26, 27, 26, 0.267));
   margin-top: -20px;
   border-radius: 15px;
   padding: 5px;
 }
+a.nav-link,
+button.nav-link {
+  color: white;
+}
+
 img.science-logo {
   width: 40px;
   border-radius: 50%;
@@ -20,6 +28,32 @@ img.science-logo {
   background-color: rgba(255, 255, 255, 0.801);
   padding: 5px;
 }
+
+.mr-auto {
+  display: flex;
+  justify-content: flex-end;
+}
+
+button.button {
+  background-color: rgba(240, 248, 255, 0);
+  border: none;
+  padding: 0;
+  margin-left: 5px;
+}
+
+button.button:active,
+button.button:visited,
+button.button:focus {
+  outline: none;
+}
+
+#fieldset input[type=radio]:checked + label:after {
+  background: black;
+}
+#fieldset label:before {
+  background-color: black;
+}
+
 
 .hidden {
   display: none;

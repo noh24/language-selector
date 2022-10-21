@@ -21,71 +21,73 @@
     <div class="card-header content rounded">
       <h2 class="display-4">Survey</h2>
       <hr class="my-2">
-      <fieldset>
-        <div>
-          <legend>Do you prefer:</legend>
-          <label>
-            <input type="radio" id="walking" value="1" name="prefer" checked>
-            Walking outside in nature while it's snowing
-          </label>
-          <label>
-            <input type="radio" id="jumping" value="2" name="prefer">
-            Jumping off a cliff on a sunny day
-          </label>
-        </div>
-        <div>
-          <legend>When you are crying, do you want to be comforted by a:</legend>
-          <label>
-            <input type="radio" id="animal" value="1" name="crying" checked>
-            Dog or cat
-          </label>
-          <label>
-            <input type="radio" id="clown" value="2" name="crying">
-            Clown
-          </label>
-        </div>
-        <div>
-          <legend>Picture yourself in a white room with no doors or windows. Do you:</legend>
-          <label>
-            <input type="radio" id="panic" value="1" name="room" checked>
-            Panic
-          </label>
-          <label>
-            <input type="radio" id="chill" value="2" name="room">
-            Chill
-          </label>
-        </div>
-        <div>
-          <legend>Who do you think invented gravity?</legend>
-          <label>
-            <input type="radio" id="newton" value="1" name="gravity" checked>
-            Isaac Newton
-          </label>
-          <label>
-            <input type="radio" id="edward" value="2" name="gravity">
-            Edward Elric
-          </label>
-        </div>
-        <div>
-          <legend>Picture Mike Tyson, the 2nd greatest Heavyweight Boxing Champ. Do you see:</legend>
-          <label>
-            <input type="radio" id="mike" value="1" name="mike" checked>
-            Mike Tyson
-          </label>
-          <label>
-            <input type="radio" id="tiger" value="2" name="mike">
-            A tiger
-          </label>
-        </div>
-        <div>
-          <button type="submit" class="btn btn-primary btn-lg">Results</button>
-        </div>
-      </fieldset>
+      <form>
+        <fieldset id="fieldset">
+          <div>
+            <legend>Do you prefer:</legend>
+            <label>
+              <input type="radio" id="walking" value="1" name="prefer" checked>
+              Walking outside in nature while it's snowing
+            </label>
+            <label>
+              <input type="radio" id="jumping" value="2" name="prefer">
+              Jumping off a cliff on a sunny day
+            </label>
+          </div>
+          <div>
+            <legend>When you are crying, do you want to be comforted by a:</legend>
+            <label>
+              <input type="radio" id="animal" value="1" name="crying" checked>
+              Dog or cat
+            </label>
+            <label>
+              <input type="radio" id="clown" value="2" name="crying">
+              Clown
+            </label>
+          </div>
+          <div>
+            <legend>Picture yourself in a white room with no doors or windows. Do you:</legend>
+            <label>
+              <input type="radio" id="panic" value="1" name="room" checked>
+              Panic
+            </label>
+            <label>
+              <input type="radio" id="chill" value="2" name="room">
+              Chill
+            </label>
+          </div>
+          <div>
+            <legend>Who do you think invented gravity?</legend>
+            <label>
+              <input type="radio" id="newton" value="1" name="gravity" checked>
+              Isaac Newton
+            </label>
+            <label>
+              <input type="radio" id="edward" value="2" name="gravity">
+              Edward Elric
+            </label>
+          </div>
+          <div>
+            <legend>Picture Mike Tyson, the 2nd greatest Heavyweight Boxing Champ. Do you see:</legend>
+            <label>
+              <input type="radio" id="mike" value="1" name="mike" checked>
+              Mike Tyson
+            </label>
+            <label>
+              <input type="radio" id="tiger" value="2" name="mike">
+              A tiger
+            </label>
+          </div>
+          <div>
+            <button type="submit" class="btn btn-primary btn-lg">Results</button>
+          </div>
+        </fieldset>
+      </form>
     </div>
-    <div id="results" class="hidden card-header content rounded">
+    <div id="results" class="card-header content rounded">
       <h2 class="display-4">Results</h2>
       <hr class="my-2">
-      <p class="lead">Recommended Programming Language: <span id="language">______________</span></p><!-- 3 programming languages: JavaScript, Ruby on Rails, Python  -->
+      <p class="lead" >Recommended Programming Language: <span id="language" class="hidden">______________</span></p><!-- 3 programming languages: JavaScript, Ruby on Rails, Python  -->
     </div>
   </div>
 </body>

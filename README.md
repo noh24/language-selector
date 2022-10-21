@@ -10,7 +10,7 @@ License information with a copyright and date -->
 # Programming Language Selector
 By Brian Noh
 Epicodus Independent Project: Programming Language Selector  
-[Portfolio Page](_enter the github deployed page link here_)
+[Programming Language Selector](noh24.github.com/language-selector/)
 
 ## Technologies Used  
 * HTML

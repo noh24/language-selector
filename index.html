@@ -4,15 +4,36 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./css/styles.css" rel="stylesheet">
   <link href="./css/bootstrap.css" rel="stylesheet">
+  <link href="./css/styles.css" rel="stylesheet">
   <script src="./js/scripts.js"></script>
-  <title>Programming Language Suggester</title>
+  <title>Programming Language Suggestor</title>
 </head>
 <body>
   <div class="container">
-    <div>
-      <h1>Hi</h1>
+    <div class="jumbotron">
+      <h1>Programming Language Selector</h1>
+      <hr class="my-2">
+      <small class="text-muted">Which programming language is right for you? Take our state of the art quiz and find out! <br>
+        We use research-based parameters, consulted tech industry leaders and psychologists to create a quiz for you!
+      </small>
+    </div>
+    <div id="form">
+      <h2 class="display-4">Survey</h2>
+      <hr class="my-2">
+      <form id="survey">
+        <!-- 5 questions -->
+        <!-- do you prefer walking outside in nature when it's snowing or jumping off cliffs in the sun: radio -->
+        <!-- when you're crying, do you prefer to be comforted by a dog or a clown -->
+        <!-- picture yourself in a white room with no doors or windows. are you: panic or chill  -->
+        <!-- who invented gravity: isaac newton or alphonso the great -->
+        <!-- Picture Mike Tyson. Do you see: Mike Tyson or a tiger -->
+      </form>
+    </div>
+    <div id="results" class="hidden">
+      <h2 class="display-4">Results</h2>
+      <hr class="my-2">
+      <p class="lead">Recommended Programming Language: <span id="program-language">______________</span></p><!-- 3 programming languages: JavaScript, Ruby on Rails, Python  -->
     </div>
   </div>
 </body>

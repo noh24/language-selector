@@ -1,18 +1,24 @@
 body {
-  background: linear-gradient(45deg, rgba(248, 217, 42, 0.562), rgba(241, 46, 46, 0.575), rgba(53, 96, 238, 0.568));
+  background: linear-gradient(60deg, rgba(7, 7, 7, 0.562), rgba(28, 121, 82, 0.349), rgba(26, 27, 26, 0.568));
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   text-align: center;
 }
 
-.white-bg {
-  background-color: rgba(255, 255, 255, 0.473);
-  width: 80%;
-  padding: 15px;
-  margin-right: auto;
-  margin-left: auto;
-  
+nav.navbar,
+nav.navbar-expand-lg {
+  background: linear-gradient(60deg, rgba(7, 7, 7, 0.247), rgba(28, 121, 82, 0.349), rgba(26, 27, 26, 0.267));
+  margin-top: -20px;
+  border-radius: 15px;
+  padding: 5px;
+}
+img.science-logo {
+  width: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(185, 185, 185, 0.986);
+  background-color: rgba(255, 255, 255, 0.801);
+  padding: 5px;
 }
 
 .hidden {
@@ -22,9 +28,11 @@ body {
 .jumbotron {
   margin-top: 30px;
   background-color: rgba(255, 255, 255, 0);
+  padding-top: 100px;
+  padding-bottom: 100px;
   /* border-bottom: 1px solid rgba(0, 0, 0, 0.125); */
 }
 
 .content {
-  padding: 2rem 1rem;
+  padding: 100px 1rem;
 }

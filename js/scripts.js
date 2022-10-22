@@ -1,8 +1,15 @@
+function hideResults() {
+  document.getElementById("language").classList.add("hidden");
+  document.getElementById("userName1a").classList.add("hidden");
+  document.getElementById("js-logo").classList.add("hidden");
+  document.getElementById("ruby-logo").classList.add("hidden");
+  document.getElementById("python-logo").classList.add("hidden");
+  document.getElementById("tree-cutter").classList.add("hidden");
+  
+}
+
 function branching(e) {
   e.preventDefault();
-  moveToResults();
-  let results = document.getElementById("language");
-  results.setAttribute("class", "hidden");
 
   const prefer = document.querySelector("input[name='prefer']:checked").value;
   const crying = document.querySelector("input[name='crying']:checked").value;
@@ -16,40 +23,47 @@ function branching(e) {
   let funny = "N/A! If you selected these options, you should be a tree cutter." // else, 2, 1, 2, 1, 1, 2
 
   if (prefer === "1" && room === "1" && terrify === "1" ) {
-    results.removeAttribute("class", "hidden");
-    results.innerText = ruby;
+    document.getElementById("language").classList.remove("hidden");
+    document.getElementById("language").innerText = ruby;
+    document.getElementById("ruby-logo").classList.remove("hidden");
   } else if (prefer === "2" && room === "1" && terrify === "1" ) {
-    results.removeAttribute("class", "hidden");
-    results.innerText = python;
+    document.getElementById("language").classList.remove("hidden");
+    document.getElementById("language").innerText = python;
+    document.getElementById("python-logo").classList.remove("hidden");
   } else if (prefer === "1" && room === "2" && terrify === "1" ) {
-    results.removeAttribute("class", "hidden");
-    results.innerText = js;
+    document.getElementById("language").classList.remove("hidden");
+    document.getElementById("language").innerText = js;
+    document.getElementById("js-logo").classList.remove("hidden");
   } else if (prefer === "1" && room === "1" && terrify === "2" ) {
-    results.removeAttribute("class", "hidden");
-    results.innerText = ruby;
+    document.getElementById("language").classList.remove("hidden");
+    document.getElementById("language").innerText = ruby;
+    document.getElementById("ruby-logo").classList.remove("hidden");
   } else if (prefer === "2" && room === "2" && terrify === "1" ) {
-    results.removeAttribute("class", "hidden");
-    results.innerText = python;
+    document.getElementById("language").classList.remove("hidden");
+    document.getElementById("language").innerText = python;
+    document.getElementById("python-logo").classList.remove("hidden");
   } else if (prefer === "2" && room === "2" && terrify === "2" ) {
-    results.removeAttribute("class", "hidden");
-    results.innerText = js;
+    document.getElementById("language").classList.remove("hidden");
+    document.getElementById("language").innerText = js;
+    document.getElementById("js-logo").classList.remove("hidden");
   } else {
-    results.removeAttribute("class", "hidden");
-    results.innerText = funny;
+    document.getElementById("language").classList.remove("hidden");
+    document.getElementById("language").innerText = funny;
+    document.getElementById("tree-cutter").classList.remove("hidden");
   }
 }
 
 window.addEventListener("load", function() {
+  hideResults();
   let form = document.querySelector("form");
   form.addEventListener("submit", branching);
 
-  let light = document.getElementById("light");
-  let dark = document.getElementById("dark");
-  light.addEventListener("click", lightMode)
-  dark.addEventListener("click", darkMode)
+  document.getElementById("light").addEventListener("click", lightMode)
+  document.getElementById("dark").addEventListener("click", darkMode)
 
 });
 
+// Light and Dark Theme
 function lightMode() {
   document.querySelector("body").style.background = "linear-gradient(60deg, rgba(241, 227, 227, 0.247), rgba(161, 236, 205, 0.349), rgba(228, 235, 228, 0.267)";
   document.querySelector("body").style.color = "black";
@@ -76,10 +90,10 @@ function moveToResults() {
   window.location.href = "#results";
 }
 
-//store all question divs into variables
-//store all element's class list into variable
-  //add and remove hidden class to div questions to make them appear one at a time
+// store all question divs into variables
+// store all element's class list into variable
+//   add and remove hidden class to div questions to make them appear one at a time
 
 
 // make the result spans and picture reset/hide
-  //target element and property to null 
+//   target element and property to null 

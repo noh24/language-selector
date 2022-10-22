@@ -33,7 +33,7 @@
             </li>
           </ul>
         </div>
-        <div class="collapse navbar-collapse mr-auto navbar-custom" id="navbarNav">
+        <div class="collapse navbar-collapse justify-right navbar-custom" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
               <button class="nav-link button" id="light" type="button">Light Mode</a>
@@ -57,66 +57,127 @@
       <h2>The Personality Quiz <small class="text-muted">backed by science.</small></h2>
       <hr class="my-2">
       <form>
-        <fieldset id="fieldset">
-          <div>
+        <div id="hidden1">
+            <div class="col-lg-4">
+              <legend>Tell Me Your Name:</legend>
+              <input class="form-control text-center" type="text" id="userName" name="userName" placeholder="Enter Your Name Here">
+            </div>
+            <div class="nextButton1">
+              <button type="submit" class="btn btn-primary" id="next1">Next</button>
+            </div>
+        </div>
+        <div id="hidden2" class="hidden">
+          <fieldset>
             <legend>Do you prefer:</legend>
-            <label>
-              <input type="radio" id="walking" value="1" name="prefer" checked>
-              Walking outside in nature while it's snowing
-            </label>
-            <label>
-              <input type="radio" id="jumping" value="2" name="prefer">
-              Jumping off a cliff on a sunny day
-            </label>
-          </div>
-          <div>
-            <legend>When you are crying, do you want to be comforted by a:</legend>
-            <label>
-              <input type="radio" id="animal" value="1" name="crying" checked>
-              Dog or cat
-            </label>
-            <label>
-              <input type="radio" id="clown" value="2" name="crying">
-              Clown
-            </label>
-          </div>
-          <div>
+            <div>
+              <label>
+                <input type="radio" id="walking" value="1" name="prefer" checked>
+                Walking outside in nature while it's snowing
+              </label>
+            </div>
+            <div>
+              <label>
+                <input type="radio" id="jumping" value="2" name="prefer">
+                Jumping off a cliff on a sunny day
+              </label>
+            </div>
+            <div>
+              <button type="submit" class="btn btn-primary pairOfButtons" id="back2">Back</button>
+              <button type="submit" class="btn btn-primary pairOfButtons" id="next2">Next</button>
+            </div>
+          </fieldset>
+        </div>
+
+        <div id="hidden3" class="hidden">
+          <fieldset>
+            <legend>When you are crying, do you want to be comforted by:</legend>
+            <div>
+              <label>
+                <input type="radio" id="animal" value="1" name="crying" checked>
+                A Dog or cat
+              </label>
+            </div>
+            <div>
+              <label>
+                <input type="radio" id="clown" value="2" name="crying">
+                A Clown
+              </label>
+            </div>
+            <div>
+              <button type="submit" class="btn btn-primary pairOfButtons" id="back3">Back</button>
+              <button type="submit" class="btn btn-primary pairOfButtons" id="next3">Next</button>
+            </div>
+          </fieldset>
+        </div>
+
+        <div id="hidden4" class="hidden">
+          <fieldset>
             <legend>Picture yourself in a white room with no doors or windows. Do you:</legend>
-            <label>
-              <input type="radio" id="panic" value="1" name="room" checked>
-              Panic
-            </label>
-            <label>
-              <input type="radio" id="chill" value="2" name="room">
-              Chill
-            </label>
-          </div>
-          <div>
-            <legend>Who do you think invented gravity?</legend>
-            <label>
-              <input type="radio" id="newton" value="1" name="gravity" checked>
-              Isaac Newton
-            </label>
-            <label>
-              <input type="radio" id="edward" value="2" name="gravity">
-              Edward Elric
-            </label>
-          </div>
-          <div>
-            <legend>Picture Mike Tyson, the 2nd greatest Heavyweight Boxing Champ. Do you see:</legend>
-            <label>
-              <input type="radio" id="mike" value="1" name="mike" checked>
-              Mike Tyson
-            </label>
-            <label>
-              <input type="radio" id="tiger" value="2" name="mike">
-              A tiger
-            </label>
-          </div>
-          <div>
-            <button type="submit" class="btn btn-primary btn-lg">Click Here To Decide Your Fate</button>
-          </div>
-        </fieldset>
+            <div>
+              <label>
+                <input type="radio" id="panic" value="1" name="room" checked>
+                Panic
+              </label>
+            </div>
+            <div>
+              <label>
+                <input type="radio" id="chill" value="2" name="room">
+                Chill
+              </label>
+            </div>
+            <div>
+              <button type="submit" class="btn btn-primary pairOfButtons" id="back4">Back</button>
+              <button type="submit" class="btn btn-primary pairOfButtons" id="next4">Next</button>
+            </div>
+          </fieldset>
+        </div>
+        
+        <div id="hidden5" class="hidden">
+          <fieldset>
+            <legend>Is Earth a spherical globe or flat?</legend>
+            <div>
+              <label>
+                <input type="radio" id="flat" value="1" name="earth" checked>
+                Flat all the way!
+              </label>
+             </div>
+            <div>
+              <label>
+                <input type="radio" id="sphere" value="2" name="earth">
+                The Earth is a sphere
+              </label>
+            </div>
+            <div>
+              <button type="submit" class="btn btn-primary pairOfButtons" id="back5">Back</button>
+              <button type="submit" class="btn btn-primary pairOfButtons" id="next5">Next</button>
+            </div>
+          </fieldset>
+        </div>
+
+        <div id="hidden6" class="hidden">
+          <fieldset>
+            <legend>What is more terrifying?</legend>
+            <div>
+              <label>
+                <input type="radio" id="tree" value="1" name="terrify" checked>
+                The realization that you'd be better off as a tree cutter
+              </label>
+            </div>
+            <div>
+              <label>
+                <input type="radio" id="children" value="2" name="terrify">
+                The responsibility of raising a child
+              </label>
+            </div>
+            <div>
+              <button type="submit" class="btn btn-primary pairOfButtons" id="back6">Back</button>
+              <button type="submit" class="btn btn-primary pairOfButtons" id="calculateResults">Calculate My Results</button>
+            </div>
+            
+          </fieldset>
+        </div>
+
+        
       </form>
     </div>
     <div id="results" class="content">
@@ -124,7 +185,7 @@
       <hr class="my-2">
       <p class="lead" >Recommended Programming Language: <span id="language" class="hidden">______________</span></p>
     </div>
-    <div class="content">
+    <div id="reviews" class="content">
       <h2 class="text-center">Real Reviews From Real People</h2>
       <hr class="my-2">
       <blockquote class="blockquote text-center">
@@ -139,3 +200,13 @@
   </div>
 </body>
 </html>
+
+//ask for user name input 
+//address user with name in results using span
+
+//add hidden class to each question div
+//separate each question into it's own div>fieldset
+//include back and next buttons(should be submit buttons) to each question
+
+//include photos to results
+// include a reset button???

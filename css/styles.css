@@ -65,7 +65,8 @@ button.button:focus {
   padding: 100px 1rem;
 }
 
-#language {
+#language,
+#userName1a {
   font-weight: bold;
   color: rgba(255, 0, 0, 0.288);
 }

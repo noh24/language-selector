@@ -47,14 +47,6 @@ button.button:focus {
   outline: none;
 }
 
-#fieldset input[type=radio]:checked + label:after {
-  background: black;
-}
-#fieldset label:before {
-  background-color: black;
-}
-
-
 .hidden {
   display: none;
 }
@@ -69,4 +61,9 @@ button.button:focus {
 
 .content {
   padding: 100px 1rem;
+}
+
+#language {
+  font-weight: bold;
+  color: rgba(255, 0, 0, 0.288);
 }

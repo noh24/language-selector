@@ -53,14 +53,17 @@ window.addEventListener("load", function() {
 function lightMode() {
   document.querySelector("body").style.background = "linear-gradient(60deg, rgba(241, 227, 227, 0.247), rgba(161, 236, 205, 0.349), rgba(228, 235, 228, 0.267)";
   document.querySelector("body").style.color = "black";
+  document.getElementById("language").style.color = "rgba(151, 21, 21, 0.733)";
   let navButton = document.querySelectorAll(".nav-link");
   for (let i = 0; i < navButton.length; i++) {
     navButton[i].style.color = "black"; 
   }
+
 }
 function darkMode() {
   document.querySelector("body").style.background = "linear-gradient(60deg, rgba(7, 7, 7, 0.562), rgba(28, 121, 82, 0.349), rgba(26, 27, 26, 0.568)";
   document.querySelector("body").style.color = "white";
+  document.getElementById("language").style.color = "rgba(255, 0, 0, 0.288)";
   //loop?
   let navButton = document.querySelectorAll(".nav-link");
   for (let i = 0; i < navButton.length; i++) {

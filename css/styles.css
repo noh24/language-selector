@@ -86,3 +86,9 @@ button.button:focus,
 h1.error-message {
   color: red;
 }
+
+.reset {
+  position: relative;
+  top: 100px;
+  
+}

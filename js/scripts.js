@@ -1,3 +1,21 @@
+window.addEventListener("load", function() {
+  hideResults();
+  document.querySelector("form").addEventListener("submit", getResults);
+  document.getElementById("reset-button").addEventListener("click", tryAgain);
+  document.getElementById("light").addEventListener("click", lightMode)
+  document.getElementById("dark").addEventListener("click", darkMode)
+  document.getElementById("next1").addEventListener("click", next1Button);
+  document.getElementById("next2").addEventListener("click", next2Button);
+  document.getElementById("next3").addEventListener("click", next3Button);
+  document.getElementById("next4").addEventListener("click", next4Button);
+  document.getElementById("next5").addEventListener("click", next5Button);
+  document.getElementById("back1").addEventListener("click", back1Button);
+  document.getElementById("back2").addEventListener("click", back2Button);
+  document.getElementById("back3").addEventListener("click", back3Button);
+  document.getElementById("back4").addEventListener("click", back4Button);
+  document.getElementById("back5").addEventListener("click", back5Button);
+
+});
 function hideResults() {
   document.getElementById("language").classList.add("hidden");
   document.getElementById("user-name1a").classList.add("hidden");
@@ -6,13 +24,99 @@ function hideResults() {
   document.getElementById("python-logo").classList.add("hidden");
   document.getElementById("tree-cutter").classList.add("hidden");
 }
-
-function getResults(e) {
-  e.preventDefault();
-
-  const name = ",".style.color = "white" + document.querySelector("input[name='user-name']").value + "!";
+function showResetHideBack() {
+  document.getElementById("back5").setAttribute("hidden", "hidden");
+  document.getElementById("reset-button").removeAttribute("hidden", "hidden");
+}
+function showResults() {
+  const name = document.querySelector("input[name='user-name']").value;
   document.getElementById("user-name1a").innerText = name;
   document.getElementById("user-name1a").classList.remove("hidden");
+  document.querySelector("p.lead").classList.remove("hidden");
+}
+function moveToResults() {
+  window.location.replace("#results");
+}
+function tryAgain() {
+  window.location.reload();
+  location.replace("#personality-quiz");
+}
+function lightMode() {
+  document.querySelector("body").style.background = "linear-gradient(60deg, rgba(241, 227, 227, 0.247), rgba(161, 236, 205, 0.349), rgba(228, 235, 228, 0.267)";
+  document.querySelector("body").style.color = "black";
+  document.getElementById("language").style.color = "rgba(151, 21, 21, 0.733)";
+  document.getElementById("userName1a").style.color = "rgba(151, 21, 21, 0.733)";
+  let navButton = document.querySelectorAll(".nav-link");
+  for (let i = 0; i < navButton.length; i++) {
+    navButton[i].style.color = "black"; 
+  }
+
+  function next1Button() {
+    const name = document.querySelector("input[name='user-name']").value;
+    if (name) {
+      document.getElementById("hidden1").classList.add("hidden");
+      document.getElementById("hidden2").classList.remove("hidden");
+      document.getElementById("error-message-container").classList.add("hidden");
+    } else {
+      document.getElementById("error-message-container").classList.remove("hidden");
+    }
+  }
+  function next2Button() {
+    document.getElementById("hidden2").classList.add("hidden");
+    document.getElementById("hidden3").classList.remove("hidden");
+  }
+  function next3Button() {
+    document.getElementById("hidden3").classList.add("hidden");
+    document.getElementById("hidden4").classList.remove("hidden");
+  }
+  function next4Button() {
+    document.getElementById("hidden4").classList.add("hidden");
+    document.getElementById("hidden5").classList.remove("hidden");
+  }
+  function next5Button() {
+    document.getElementById("hidden5").classList.add("hidden");
+    document.getElementById("hidden6").classList.remove("hidden");
+  }
+  //next6button is the submit button
+  function back1Button() {
+    document.getElementById("hidden1").classList.remove("hidden");
+    document.getElementById("hidden2").classList.add("hidden");
+  }
+  function back2Button() {
+    document.getElementById("hidden2").classList.remove("hidden");
+    document.getElementById("hidden3").classList.add("hidden");
+  }
+  function back3Button() {
+    document.getElementById("hidden3").classList.remove("hidden");
+    document.getElementById("hidden4").classList.add("hidden");
+  }
+  function back4Button() {
+    document.getElementById("hidden4").classList.remove("hidden");
+    document.getElementById("hidden5").classList.add("hidden");
+  }
+  function back5Button() {
+    document.getElementById("hidden5").classList.remove("hidden");
+    document.getElementById("hidden6").classList.add("hidden");
+  }
+  
+}
+function darkMode() {
+  document.querySelector("body").style.background = "linear-gradient(60deg, rgba(7, 7, 7, 0.562), rgba(28, 121, 82, 0.349), rgba(26, 27, 26, 0.568)";
+  document.querySelector("body").style.color = "white";
+  document.getElementById("language").style.color = "rgba(255, 0, 0, 0.288)";
+  document.getElementById("userName1a").style.color = "rgba(255, 0, 0, 0.288)";
+  //loop?
+  let navButton = document.querySelectorAll(".nav-link");
+  for (let i = 0; i < navButton.length; i++) {
+    navButton[i].style.color = "white";
+  }
+}
+function getResults(e) {
+  e.preventDefault();
+  moveToResults();
+  showResetHideBack();
+  showResults();
+  
 
   const prefer = document.querySelector("input[name='prefer']:checked").value;
   const crying = document.querySelector("input[name='crying']:checked").value;
@@ -55,108 +159,9 @@ function getResults(e) {
     document.getElementById("tree-cutter").classList.remove("hidden");
   }
 }
-window.addEventListener("load", function() {
-  hideResults();
-  document.querySelector("form").addEventListener("submit", getResults);
-
-  document.getElementById("light").addEventListener("click", lightMode)
-  document.getElementById("dark").addEventListener("click", darkMode)
-  document.getElementById("next1").addEventListener("click", next1Button);
-  document.getElementById("next2").addEventListener("click", next2Button);
-  document.getElementById("next3").addEventListener("click", next3Button);
-  document.getElementById("next4").addEventListener("click", next4Button);
-  document.getElementById("next5").addEventListener("click", next5Button);
-  document.getElementById("back1").addEventListener("click", back1Button);
-  document.getElementById("back2").addEventListener("click", back2Button);
-  document.getElementById("back3").addEventListener("click", back3Button);
-  document.getElementById("back4").addEventListener("click", back4Button);
-  document.getElementById("back5").addEventListener("click", back5Button);
-
-});
-
-function next1Button() {
-  const name = document.querySelector("input[name='user-name']").value;
-  if (name) {
-    document.getElementById("hidden1").classList.add("hidden");
-    document.getElementById("hidden2").classList.remove("hidden");
-    document.getElementById("error-message-container").classList.add("hidden");
-  } else {
-    document.getElementById("error-message-container").classList.remove("hidden");
-  }
-}
-function next2Button() {
-  document.getElementById("hidden2").classList.add("hidden");
-  document.getElementById("hidden3").classList.remove("hidden");
-}
-function next3Button() {
-  document.getElementById("hidden3").classList.add("hidden");
-  document.getElementById("hidden4").classList.remove("hidden");
-}
-function next4Button() {
-  document.getElementById("hidden4").classList.add("hidden");
-  document.getElementById("hidden5").classList.remove("hidden");
-}
-function next5Button() {
-  document.getElementById("hidden5").classList.add("hidden");
-  document.getElementById("hidden6").classList.remove("hidden");
-}
-//next6button is the submit button
-function back1Button() {
-  document.getElementById("hidden1").classList.remove("hidden");
-  document.getElementById("hidden2").classList.add("hidden");
-}
-function back2Button() {
-  document.getElementById("hidden2").classList.remove("hidden");
-  document.getElementById("hidden3").classList.add("hidden");
-}
-function back3Button() {
-  document.getElementById("hidden3").classList.remove("hidden");
-  document.getElementById("hidden4").classList.add("hidden");
-}
-function back4Button() {
-  document.getElementById("hidden4").classList.remove("hidden");
-  document.getElementById("hidden5").classList.add("hidden");
-}
-function back5Button() {
-  document.getElementById("hidden5").classList.remove("hidden");
-  document.getElementById("hidden6").classList.add("hidden");
-}
-//when next1 button is clicked, do this function
-//condition if name is entered, show next page and hide first page
-//if name isn't entered, give error message to enter shit
-
-// Light and Dark Theme
-function lightMode() {
-  document.querySelector("body").style.background = "linear-gradient(60deg, rgba(241, 227, 227, 0.247), rgba(161, 236, 205, 0.349), rgba(228, 235, 228, 0.267)";
-  document.querySelector("body").style.color = "black";
-  document.getElementById("language").style.color = "rgba(151, 21, 21, 0.733)";
-  document.getElementById("userName1a").style.color = "rgba(151, 21, 21, 0.733)";
-  let navButton = document.querySelectorAll(".nav-link");
-  for (let i = 0; i < navButton.length; i++) {
-    navButton[i].style.color = "black"; 
-  }
-
-}
-function darkMode() {
-  document.querySelector("body").style.background = "linear-gradient(60deg, rgba(7, 7, 7, 0.562), rgba(28, 121, 82, 0.349), rgba(26, 27, 26, 0.568)";
-  document.querySelector("body").style.color = "white";
-  document.getElementById("language").style.color = "rgba(255, 0, 0, 0.288)";
-  document.getElementById("userName1a").style.color = "rgba(255, 0, 0, 0.288)";
-  //loop?
-  let navButton = document.querySelectorAll(".nav-link");
-  for (let i = 0; i < navButton.length; i++) {
-    navButton[i].style.color = "white";
-  }
-}
-function moveToResults() {
-  window.location.href = "#results";
-}
 
 
-// store all question divs into variables
-// store all element's class list into variable
-//   add and remove hidden class to div questions to make them appear one at a time
 
 
-// make the result spans and picture reset/hide
-//   target element and property to null 
+
+

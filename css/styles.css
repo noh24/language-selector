@@ -48,7 +48,8 @@ button.button {
 
 button.button:active,
 button.button:visited,
-button.button:focus {
+button.button:focus, 
+.pairOfButtons {
   outline: none;
 }
 
@@ -69,15 +70,19 @@ button.button:focus {
 }
 
 #language,
-#userName1a {
+#user-name1a {
   font-weight: bold;
   color: rgba(255, 0, 0, 0.288);
 }
 
-.nextButton1 {
+.next1-button {
   margin-top: 10px;
 }
 
 .pairOfButtons {
   margin: 0 5px;
+}
+
+h1.error-message {
+  color: red;
 }

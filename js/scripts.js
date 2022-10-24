@@ -18,6 +18,12 @@ function showResults() {
   document.getElementById("user-name1a").classList.remove("hidden");
   document.querySelector("p.lead").classList.remove("hidden");
 }
+function hideResultImages() {
+  document.getElementById("ruby-logo").classList.add("hidden");
+  document.getElementById("python-logo").classList.add("hidden");
+  document.getElementById("js-logo").classList.add("hidden");
+  document.getElementById("tree-cutter").classList.add("hidden");
+}
 function moveToResults() {
   window.location.replace("#results");
 }
@@ -73,9 +79,6 @@ function back5Button() {
   document.getElementById("hidden5").classList.remove("hidden");
   document.getElementById("hidden6").classList.add("hidden");
 }
-function hideQuestion() {
-  document.getElementById("hidden6").classList.add("hidden");
-}
 function lightMode() {
   document.querySelector("body").style.background = "linear-gradient(60deg, rgba(241, 227, 227, 0.247), rgba(161, 236, 205, 0.349), rgba(228, 235, 228, 0.267)";
   document.querySelector("body").style.color = "black";
@@ -103,7 +106,7 @@ function getResults(e) {
   showReset();
   hideBack();
   showResults();
-  hideQuestion();
+  hideResultImages();
   const prefer = document.querySelector("input[name='prefer']:checked").value;
   const crying = document.querySelector("input[name='crying']:checked").value;
   const room = document.querySelector("input[name='room']:checked").value;

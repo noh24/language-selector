@@ -107,15 +107,16 @@ function getResults(e) {
   hideBack();
   showResults();
   hideResultImages();
+  //variables crying and earth are not used but put in case I want to use in the future
   const prefer = document.querySelector("input[name='prefer']:checked").value;
-  const crying = document.querySelector("input[name='crying']:checked").value;
+  const crying = document.querySelector("input[name='crying']:checked").value; 
   const room = document.querySelector("input[name='room']:checked").value;
   const earth = document.querySelector("input[name='earth']:checked").value;
   const terrify = document.querySelector("input[name='terrify']:checked").value;
   let ruby = "Ruby on Rails."; // 1, 1, 1 or 1, 1, 2
   let python = "Python."; //2, 1, 1 or 2, 2, 1
-  let js = "JavaScript." //1, 2, 1 or 2, 2, 2
-  let funny = "N/A! If you selected these options, you should be a tree cutter." // else, 2, 1, 2, 1, 1, 2
+  let js = "JavaScript."; //1, 2, 1 or 2, 2, 2
+  let funny = "N/A! If you selected these options, you should be a tree cutter.";  // else, 2, 1, 2, 1, 1, 2
 
   if (prefer === "1" && room === "1" && terrify === "1" ) {
     document.getElementById("language").classList.remove("hidden");
@@ -151,8 +152,8 @@ window.addEventListener("load", function() {
   hideResults();
   document.querySelector("form").addEventListener("submit", getResults);
   document.getElementById("reset-button").addEventListener("click", tryAgain);
-  document.getElementById("light").addEventListener("click", lightMode)
-  document.getElementById("dark").addEventListener("click", darkMode)
+  document.getElementById("light").addEventListener("click", lightMode);
+  document.getElementById("dark").addEventListener("click", darkMode);
   document.getElementById("next1").addEventListener("click", next1Button);
   document.getElementById("next2").addEventListener("click", next2Button);
   document.getElementById("next3").addEventListener("click", next3Button);

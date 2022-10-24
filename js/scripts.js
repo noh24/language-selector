@@ -6,8 +6,10 @@ function hideResults() {
   document.getElementById("python-logo").classList.add("hidden");
   document.getElementById("tree-cutter").classList.add("hidden");
 }
-function showResetHideBack() {
+function showReset() {
   document.getElementById("back5").setAttribute("hidden", "hidden");
+}
+function hideBack() {
   document.getElementById("reset-button").removeAttribute("hidden", "hidden");
 }
 function showResults() {
@@ -20,6 +22,7 @@ function moveToResults() {
   window.location.replace("#results");
 }
 function tryAgain() {
+  document.querySelector("form").reset();
   window.location.reload();
   location.replace("#personality-quiz");
 }
@@ -70,6 +73,9 @@ function back5Button() {
   document.getElementById("hidden5").classList.remove("hidden");
   document.getElementById("hidden6").classList.add("hidden");
 }
+function hideQuestion() {
+  document.getElementById("hidden6").classList.add("hidden");
+}
 function lightMode() {
   document.querySelector("body").style.background = "linear-gradient(60deg, rgba(241, 227, 227, 0.247), rgba(161, 236, 205, 0.349), rgba(228, 235, 228, 0.267)";
   document.querySelector("body").style.color = "black";
@@ -94,8 +100,10 @@ function darkMode() {
 function getResults(e) {
   e.preventDefault();
   moveToResults();
-  showResetHideBack();
+  showReset();
+  hideBack();
   showResults();
+  hideQuestion();
   const prefer = document.querySelector("input[name='prefer']:checked").value;
   const crying = document.querySelector("input[name='crying']:checked").value;
   const room = document.querySelector("input[name='room']:checked").value;

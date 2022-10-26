@@ -107,12 +107,14 @@ function getResults(e) {
   hideBack();
   showResults();
   hideResultImages();
-  //variables crying and earth are not used but put in case I want to use in the future
+  
   const prefer = document.querySelector("input[name='prefer']:checked").value;
-  const crying = document.querySelector("input[name='crying']:checked").value; 
   const room = document.querySelector("input[name='room']:checked").value;
-  const earth = document.querySelector("input[name='earth']:checked").value;
   const terrify = document.querySelector("input[name='terrify']:checked").value;
+  //variables crying and earth are not used but put in case I want to use in the future
+  //const crying = document.querySelector("input[name='crying']:checked").value; 
+  //const earth = document.querySelector("input[name='earth']:checked").value;
+  
   let ruby = "Ruby on Rails."; // 1, 1, 1 or 1, 1, 2
   let python = "Python."; //2, 1, 1 or 2, 2, 1
   let js = "JavaScript."; //1, 2, 1 or 2, 2, 2
